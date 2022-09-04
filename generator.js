@@ -26,7 +26,7 @@ function displayExcuseSNCF(){
     res+=gare+", ";
     var typeRetard=random_item(typesRetard);
     res+=typeRetard+" avec un retard de ";
-    var retard=55*(Math.floor(20*(Math.random())+1));
+    var retard=5*(Math.floor(20*(Math.random())+0.02));
     res+=retard+"mn, en raison ";
     var type=random_item([1,2,3,4]);
     var typeProbleme;
