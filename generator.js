@@ -11,7 +11,7 @@ function displayExcuseSNCF(){
     var typeProblemeChez=typeProblemeSur.concat(["d'une grêve",]); //dans ou Chez
     var typeProblemeAvec=["d'une collision", "d'un problème","de difficultés","d'un accident","d'un conflit"];//avec quoi
 
-    var deQuoi=["électrique","de la météo","de signalisation","de matériel","d'un système","informatique","de chargement"];
+    var deQuoi=["électrique","technique","de la météo","de signalisation","de matériel","d'un système","informatique","de chargement"];
     var surQuoi=["sur le réseau","sur un matériel","sur une voie","sur un caténaire"];
     var dansQuoi=["dans une gare", "dans une usine","dans un technicentre", "dans un centre opérationnel", "dans un centre d'aiguillage",];
     var avecQuoi=["avec un animal","avec du gibier","avec un sanglier","avec un faisan","avec un voyageur","avec un concurrent","avec le personnel","avec un client"];//Pas de chez
@@ -79,7 +79,8 @@ function displayExcuseSNCF(){
         res+=" "+complement+" ";
         if (suite && random_item([1,2])==1) res+=random_item(chezQui);
     }
-    res+=".</br>La SNCF vous présente toutes ses excuses pour ce désagrément."
+    res+=".</br>La SNCF vous présente toutes ses excuses pour ce désagrément.";
+    document.getElementById("excuseSNCF").style.border="5px grey outset";//#4169E1
     document.getElementById("excuseSNCF").innerHTML=res;
 }
 function displayExcuseAirFrance(){
